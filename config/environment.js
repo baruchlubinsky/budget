@@ -12,7 +12,10 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
-
+    contentSecurityPolicy: {
+      'connect-src': "'self' everyrest.appspot.com 0.0.0.0:8080",
+      'font-src':"'self' fonts.gstatic.com",
+    },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

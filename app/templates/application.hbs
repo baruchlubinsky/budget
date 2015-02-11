@@ -1,3 +1,18 @@
-<h2 id="title">Welcome to Ember.js</h2>
-
-{{outlet}}
+{{#paper-sidenav}}
+  {{#paper-drawer}}
+    <h1 class="logo"><strong>Budget</strong></h1>
+    {{#paper-content}}
+      <nav class="sidenav-nav">
+        <ul>
+          <li>{{#link-to "index"}}Home{{/link-to}}</li>
+          <li>{{#link-to "expense"}}Add expense{{/link-to}}</li>
+        </ul>
+      </nav>
+    {{/paper-content}}
+  {{/paper-drawer}}
+  {{#paper-content classNames="sidenav-static-content"}}
+    {{outlet}}
+  {{/paper-content}}
+{{/paper-sidenav}}
+<!-- Place this tag right after the last button or just before your close body tag. -->
+<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
