@@ -1,4 +1,8 @@
-{{input-group label="Name" value=model.name type="text"}}
-{{input-group label="Salary" value=model.salary type="number"}}
-{{input-group label="Sub-total" value=subTotal type="text" disabled=true}}
-{{input-group label="Remaining" value=remaining type="text" disabled=true}}
+<h2>{{name}}</h2>
+<label>Sub Total</label>
+<h3>{{subTotal}}</h3>
+<label>Remaining</label>
+<h3>{{remaining}}</h3>
+<p>
+{{#link-to "user" model}}Settings{{/link-to}}
+</p>

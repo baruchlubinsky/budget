@@ -19,7 +19,8 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+    userID: function() {return localStorage.getItem("budget.user.id")},
   };
 
   if (environment === 'development') {
