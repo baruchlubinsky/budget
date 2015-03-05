@@ -13,14 +13,4 @@ export default Ember.Route.extend({
 			});
 		}
 	},
-	// calculate: function() {
-	// 	var start = this.controller.get('model.monthStart');
-	// 	var expenses = this.controllerFor('expenses').get('model');
-	// 	var thisMonth = expenses.filter(function(item){
-	// 		var date = item.get('date');
-	// 		var res = date > start;
-	// 		return res;
-	// 	});
-	// 	this.controllerFor('expenses').set('model', thisMonth);
-	// }.observes('controllers.expenses.@each', 'model'),
 });

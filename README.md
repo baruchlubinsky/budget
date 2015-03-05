@@ -25,6 +25,10 @@ You will need the following things properly installed on your computer.
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
+## Development API server
+
+* Run a local instance of [EveryREST](https://github.com/baruchlubinsky/everyrest)
+
 ### Code Generators
 
 Make use of the many generators for code, try `ember help generate` for more details
