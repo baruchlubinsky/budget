@@ -1,4 +1,7 @@
 {{input-group label="Name" value=name type="text"}}
 {{input-group label="Salary" value=salary type="number"}}
 {{input-group label="Month start" value=monthStart type="number"}}
+<p>
+{{#link-to 'monthly' this}}Monthly expenses{{/link-to}}
+</p>
 {{#paper-button raised=true classNames="md-primary" action="save"}}Save{{/paper-button}}

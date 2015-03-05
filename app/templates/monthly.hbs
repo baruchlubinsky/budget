@@ -1,0 +1,22 @@
+<h2>Monthly expenses</h2>
+{{#paper-content classNames="md-whiteframe-z1"}}
+    {{#paper-list}}
+      {{#each model}}
+        {{#paper-item}}
+          {{#paper-tile-content}}
+            <div class="expense-detail">
+              <h3>{{name}}</h3>
+            </div>
+            <div class="expense-amount">
+              <h3>R {{amount}}</h3>
+            </div>
+          {{/paper-tile-content}}
+        {{/paper-item}}
+        {{paper-divider}}
+      {{/each}}
+    {{/paper-list}}
+  {{/paper-content}}
+<h3>Add</h3>
+{{input-group label="Name" value=newExpense.name type="text"}}
+{{input-group label="Amount" value=newExpense.amount type="number"}}
+{{#paper-button raised=true classNames="md-primary" action="save"}}Save{{/paper-button}}

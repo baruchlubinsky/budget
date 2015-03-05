@@ -10,6 +10,7 @@ Router.map(function() {
 	this.route('month', {controller: 'expenses'});
 	this.route('user', {path: 'user/:id'});
 	this.route('new-user');
+	this.route('monthly', {path: 'user/:id/monthly'});
 });
 
 export default Router;
