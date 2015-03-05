@@ -2,17 +2,17 @@ import Ember from "ember";
 
 export default Ember.ArrayController.extend({
 	needs: 'index',
-	subTotal: function() {
-		if(this.get('length') === 0) {
-			return 0;
-		}
-		var total = 0;
-		this.forEach(function(item) {
-			var amount = item.get('amount');
-			if(amount != null) {
-				total = total + amount;
+	name: function() {
+		var monthStart = this.get('controllers.index.model').get('monthStart');
+		var now = new Date();
+		var thisMonth = now.getMonth();
+		if(monthStart > 15) {
+			thisMonth--;
+			if(thisMonth == 12) {
+				thisMonth = 0;
 			}
-		});
-		return total;
-	}.property('@each')
+		}
+		var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+		return monthNames[thisMonth] + " " + now.getFullYear();
+	}.property('controllers.index.model.monthStart')
 });
