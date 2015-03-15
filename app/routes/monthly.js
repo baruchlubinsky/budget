@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 	model: function(params) {
-		return this.store.find('user', params.id);;
+		return this.store.find('user', params.id);
 	},
 	setupController: function(controller, model) {
 		if(model === null) {
@@ -28,7 +28,15 @@ export default Ember.Route.extend({
 						function() {
 							controller.set('newExpense', this.store.createRecord('monthlyExpense',{}));
 						});
-			})
+			});
+		},
+		delete: function(record) {
+			var user = this.controller.get('user');
+			var expenses = this.controller.get('model');
+			expenses.removeObject(record);
+			record.destroyRecord().then(function() {
+				user.save();
+			});
 		}
 	}
 });

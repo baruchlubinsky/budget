@@ -5,3 +5,25 @@
 .expense-amount {
 	float: right;
 }
+
+.expense-delete {
+	float: right;
+	padding: 12px;
+	padding-right: 0px;
+	vertical-align: middle;
+}
+
+.monthly-delete {
+	float: right;
+	vertical-align: middle;
+	padding-left: 12px;
+}
+
+a:visited, a:link, a:active {
+	color: black;
+    text-decoration: none;
+}
+
+a:hover, a:hover label {
+	text-decoration: underline;
+}

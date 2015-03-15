@@ -3,7 +3,7 @@ import Ember from "ember";
 export default Ember.ArrayController.extend({
 	needs: 'index',
 	name: function() {
-		var monthStart = this.get('controllers.index.model').get('monthStart');
+		var monthStart = this.get('controllers.index.model.monthStart');
 		var now = new Date();
 		var thisMonth = now.getMonth();
 		if(monthStart > 15) {

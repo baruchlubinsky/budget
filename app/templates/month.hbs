@@ -4,9 +4,12 @@
       {{#each model}}
         {{#paper-item}}
           {{#paper-tile-content}}
-            <div class="expense-detail">
+            <div class="expense-detail" {{action 'edit' this}}>
               <h3>{{category}}</h3>
               <h4>{{date}}</h4>
+            </div>
+            <div class="expense-delete" {{action 'delete' this}}>
+              <md-icon id="ember785" class="ember-view paper-icon ic-delete"></md-icon>
             </div>
             <div class="expense-amount">
               <h3>R {{amount}}</h3>

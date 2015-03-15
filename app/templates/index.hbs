@@ -1,8 +1,5 @@
-<h2>{{name}}</h2>
+{{#link-to "user" model}}<h2>{{name}}</h2>{{/link-to}}
 {{#link-to "month"}}<label>Sub Total</label>{{/link-to}}
 <h3>{{subTotal}}</h3>
 <label>Remaining</label>
 <h3>{{remaining}}</h3>
-<p>
-{{#link-to "user" model}}Settings{{/link-to}}
-</p>

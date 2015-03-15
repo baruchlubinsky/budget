@@ -7,6 +7,9 @@
             <div class="expense-detail">
               <h3>{{name}}</h3>
             </div>
+            <div class="monthly-delete" {{action 'delete' this}}>
+              <md-icon id="ember785" class="ember-view paper-icon ic-delete"></md-icon>
+            </div>
             <div class="expense-amount">
               <h3>R {{amount}}</h3>
             </div>
